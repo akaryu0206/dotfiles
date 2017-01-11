@@ -2,7 +2,6 @@
 export LANG=ja_JP.UTF-8
 
 # 補完
-fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit
 
@@ -35,6 +34,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # エイリアス
+alias restartshell='exec $SHELL -l'
 alias ..='cd ../'
 alias la='ls -la -G'
 alias ll='ls -l -G'
@@ -49,6 +49,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # zplug
 source ~/.zplug/init.zsh
+zplug "zsh-users/zsh-completions"
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
 zplug load --verbose
