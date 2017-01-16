@@ -1,3 +1,13 @@
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
+# *env
+eval "$(ndenv init -)"
+eval "$(phpenv init -)"
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
+
 # 日本語
 export LANG=ja_JP.UTF-8
 
