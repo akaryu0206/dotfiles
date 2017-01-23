@@ -2,6 +2,9 @@
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
+# homebrew
+export PATH="/usr/local/sbin:$PATH"
+
 # *env
 eval "$(ndenv init -)"
 eval "$(phpenv init -)"
