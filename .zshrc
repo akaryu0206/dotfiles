@@ -47,15 +47,9 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # エイリアス
-alias restartshell='exec $SHELL -l'
 alias ..='cd ../'
 alias la='ls -la -G'
 alias ll='ls -l -G'
-alias so='source'
-alias v='vim'
-alias vg='vagrant'
-alias cmpsr='composer'
-alias parti='php artisan'
 
 # 大文字小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
