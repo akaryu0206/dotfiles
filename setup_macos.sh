@@ -1,5 +1,31 @@
 #!/bin/sh
 
+
+
+
+
+#--------------------------------------------------
+# アプリケーション、ツール等のインストール
+#--------------------------------------------------
+# Homebrewをインストール
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Homebrew Bundleをインストール
+brew tap Homebrew/bundle
+
+# Homebrew-Caskをインストール
+brew tap caskroom/cask
+
+# mas-cliをインストール
+brew install mas
+
+
+
+
+
+#--------------------------------------------------
+# macOSの設定
+#--------------------------------------------------
 # Dockを自動的に隠す
 defaults write com.apple.dock autohide -bool true
 
