@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Dockを自動的に隠す
 defaults write com.apple.dock autohide -bool true
 
