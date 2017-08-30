@@ -66,3 +66,6 @@ zplug "zsh-users/zsh-completions"
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
 zplug load --verbose
+
+# set path to bion 2.7
+export PATH="/usr/local/opt/bison@2.7/bin:$PATH"
