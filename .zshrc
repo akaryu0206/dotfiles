@@ -1,71 +1,49 @@
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+# Enable vim mode
+bindkey -v
 
-# homebrew
-export PATH="/usr/local/sbin:$PATH"
+# Enable completion
+autoload -Uz compinit; compinit
 
-# *env
-eval "$(ndenv init -)"
-eval "$(phpenv init -)"
-eval "$(pyenv init -)"
-eval "$(rbenv init -)"
+# Enable colors
+autoload -Uz colors; colors
 
-# 日本語
-export LANG=ja_JP.UTF-8
-
-# 補完
-autoload -U compinit
-compinit
-
-# 色を使用
-autoload -Uz colors
-colors
-
-# cdコマンドを省略
+# Make it changeable directory without 'cd' command
 setopt auto_cd
 
-# cdの後にlsを実行
+# List current directory after change directory
 function chpwd() { ls -l -G }
 
-# 自動でpushdを実行
+# Remember directory changes history
 setopt auto_pushd
 
-# pushdから重複を削除
+# Remove duplicates from directory change history
 setopt pushd_ignore_dups
 
-# コマンドミスを修正
+# Correct typo
 setopt correct
 
-# 他のターミナルとヒストリーを共有
+# Share histories with other terminals
 setopt share_history
 
-# ヒストリーに重複を表示しない
+# Remove duplicates from shared command history
 setopt histignorealldups
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
+HISTSIZE=1000
 SAVEHIST=10000
 
-# エイリアス
+# Aliases
 alias restartshell='exec $SHELL -l'
-alias ..='cd ../'
 alias la='ls -la -G'
 alias ll='ls -l -G'
-alias so='source'
-alias v='vim'
-alias vg='vagrant'
-alias cmpsr='composer'
-alias parti='php artisan'
 
-# 大文字小文字を区別しない
+# Ignore uppercase and lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# zplug
+# Zplug
 source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-completions"
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
+zplug "mollifier/cd-gitroot"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug load --verbose
-
-# set path to bion 2.7
-export PATH="/usr/local/opt/bison@2.7/bin:$PATH"
