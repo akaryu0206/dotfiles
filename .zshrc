@@ -1,3 +1,16 @@
+export PATH="$HOME/.anyenv/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/bison@2.7/bin:$PATH"
+export PATH="/usr/local/opt/apr/bin:$PATH"↲
+export PATH="/usr/local/opt/apr-util/bin:$PATH"
+
+# Anyenv
+eval "$(anyenv init -)"
+eval "$(ndenv init -)"
+eval "$(phpenv init -)"
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
+
 # Enable vim mode
 bindkey -v
 
