@@ -1,15 +1,19 @@
 export PATH="$HOME/.anyenv/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/bison@2.7/bin:$PATH"
-export PATH="/usr/local/opt/apr/bin:$PATH"↲
-export PATH="/usr/local/opt/apr-util/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PGDATA=/usr/local/var/postgres
 
 # Anyenv
 eval "$(anyenv init -)"
 eval "$(ndenv init -)"
-eval "$(phpenv init -)"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
+
+#phpbrew
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
 # Enable vim mode
 bindkey -v
