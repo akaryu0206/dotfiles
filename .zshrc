@@ -15,8 +15,8 @@ eval "$(rbenv init -)"
 #phpbrew
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
-# Enable vim mode
-bindkey -v
+# Enable emacs mode
+bindkey -e
 
 # Enable completion
 autoload -Uz compinit; compinit
