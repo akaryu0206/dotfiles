@@ -8,7 +8,8 @@ set expandtab
 set shiftwidth=2
 set smartindent
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+"set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 set nrformats-=octal
 set hidden
 set whichwrap=b,s,[,],<,>
