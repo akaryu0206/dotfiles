@@ -1,19 +1,28 @@
+# Language setting
+export LANG=ja_JP.UTF-8
+export LC_ALL=ja_JP.UTF-8
+
+# Path
 export PATH="$HOME/.anyenv/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH=$PATH:./node_modules/.bin
 export PGDATA=/usr/local/var/postgres
 
 # Anyenv
 eval "$(anyenv init -)"
-eval "$(ndenv init -)"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
+eval "$(goenv init -)"
 
-#phpbrew
+# phpbrew
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
+# nodebrew
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 # Enable emacs mode
 bindkey -e
@@ -64,3 +73,6 @@ zplug "sindresorhus/pure"
 zplug "mollifier/cd-gitroot"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug load --verbose
+
+# Composer
+export PATH="$PATH:$HOME/.composer/vendor/bin"
