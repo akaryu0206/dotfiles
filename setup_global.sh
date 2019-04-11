@@ -25,6 +25,11 @@ if [ ! -d ~/.anyenv/envs/pyenv ]; then
   anyenv install pyenv
 fi
 
+# install goenv
+if [ ! -d ~/.anyenv/envs/goenv ]; then
+  anyenv install goenv
+fi
+
 # install phpbrew
 if [ ! -d ~/.phpbrew ]; then
   curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
