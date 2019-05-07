@@ -88,11 +88,11 @@ module.exports = {
     MaterialTheme: {
       // Set the theme variant,
       // OPTIONS: 'Darker', 'Palenight', 'Ocean', ''
-      theme: '',
+      theme: 'Palenight',
 
       // [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
       // OPTIONS: From 0.1 to 1
-      backgroundOpacity: '1',
+      backgroundOpacity: '0.5',
 
       // [Optional] Set the accent color for the current active tab
       accentColor: '#64FFDA',
@@ -146,6 +146,7 @@ module.exports = {
     // pokemonSyntax: 'dark', // Define the color of the terminal tabs
     // unibody: 'false', // Define the color of the Hyper window header
     // poketab: 'true', // Deactivate your theme's poketab
+    scrollback: 5000
   },
 
   // a list of plugins to fetch and install from npm
