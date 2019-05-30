@@ -61,6 +61,11 @@ SAVEHIST=10000
 alias restartshell='exec $SHELL -l'
 alias la='ls -la -G'
 alias ll='ls -l -G'
+alias rr='bin/rails routes'
+alias rc='bin/rails c'
+alias fs='RACK_HANDLER=falcon rails server'
+alias bi='bundle install'
+alias rsp='bin/rails spec'
 
 # Ignore uppercase and lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
