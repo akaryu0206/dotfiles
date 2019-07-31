@@ -44,6 +44,7 @@ fi
 
 # install ruby
 brew install ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 gem install rubocop ruby-debug-ide debase rcodetools fastri
 
 # install php
