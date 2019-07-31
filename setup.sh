@@ -1,10 +1,5 @@
 #!/bin/sh
 
-# install zplug
-if [ ! -d ~/.zplug ]; then
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-fi
-
 # link dotfiles
 if [ -f ~/.gitignore_global ]; then
   rm ~/.gitignore_global
@@ -35,13 +30,6 @@ if [ -f ~/.hyper.js ]; then
   rm ~/.hyper.js
 fi
 ln -sf ~/dotfiles/hyper.js ~/.hyper.js
-
-# apply dotfiles
-source ~/.zshenv
-source ~/.zshrc
-
-# install zsh plugins via zplug
-zplug install
 
 # install homebrew
 if [ ! -f /usr/local/bin/brew ]; then
@@ -84,3 +72,10 @@ brew install tig
 
 # cleanup
 brew cleanup
+rm -f .bash_history
+rm -f .bash_sessions
+
+# install zplug
+if [ ! -d ~/.zplug ]; then
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+fi
